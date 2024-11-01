@@ -95,3 +95,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Crează tabelele pentru utilizatori și probleme
     app.run(debug=True)
+#my branch is here
