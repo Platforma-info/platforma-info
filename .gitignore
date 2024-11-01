@@ -1,0 +1,4 @@
+//ignore _pycache_ folder and venv folder and instance/users.db file in the git repository
+__pycache__
+venv
+instance/users.db

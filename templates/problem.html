@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problemă</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Problemă</h1>
+    
+    <div class="description">
+        <h2>Enunț:</h2>
+        <p>{{ problem.description }}</p>
+    </div>
+    
+    <div class="input">
+        <h2>Input:</h2>
+        <p>{{ problem.input_data }}</p>
+    </div>
+    
+    <div class="output">
+        <h2>Output:</h2>
+        <p>{{ problem.output_data }}</p>
+    </div>
+    
+    <form method="POST">
+        <textarea name="source_code" placeholder="Scrieți soluția aici..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <a href="{{ url_for('index') }}">Înapoi la probleme</a>
+</body>
+</html>
