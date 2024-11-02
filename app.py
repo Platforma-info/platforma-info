@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -92,7 +93,9 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 8000))
     with app.app_context():
         db.create_all()  # Crează tabelele pentru utilizatori și probleme
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host="0.0.0.0", port=port)
 #my branch is here
