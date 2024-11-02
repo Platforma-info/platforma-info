@@ -98,4 +98,5 @@ if __name__ == '__main__':
         db.create_all()  # Crează tabelele pentru utilizatori și probleme
     # app.run(debug=True)
     app.run(host="0.0.0.0", port=port)
+
 #my branch is here
