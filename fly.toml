@@ -1,12 +1,13 @@
-# fly.toml app configuration file generated for platforma-info-3 on 2024-11-01T23:06:37Z
+# fly.toml app configuration file generated for platforma-info-3-green-cherry-2319 on 2024-11-02T19:30:38+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'platforma-info-3'
+app = 'platforma-info-3-green-cherry-2319'
 primary_region = 'ams'
 
 [build]
+  image = 'flyio/hellofly:latest'
 
 [http_service]
   internal_port = 8080
