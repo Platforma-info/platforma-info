@@ -18,12 +18,13 @@
             </ul>
         {% endif %}
     {% endwith %}
+    
     <ul>
         {% for problem in problems %}
             <li><a href="{{ url_for('problem', problem_id=problem.id) }}">{{ problem.description }}</a></li>
         {% endfor %}
     </ul>
+
     <a href="{{ url_for('logout') }}" style="color: red; float: right;">Deconectare</a>
 </body>
 </html>
-
