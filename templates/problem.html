@@ -12,9 +12,11 @@
     <!-- Mesaj flash pentru rezultat -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            {% for category, message in messages %}
-                <p class="{{ category }}">{{ message }}</p>
-            {% endfor %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
         {% endif %}
     {% endwith %}
     
@@ -37,7 +39,12 @@
         <textarea name="source_code" placeholder="Scrieți soluția aici..." required></textarea>
         <button type="submit">Submit</button>
     </form>
-    
+    {% if result %}
+    <div class="result">
+        <p>Rezultatul execuției codului:</p>
+        <pre>{{ result }}</pre>
+    </div>
+{% endif %}
     <a href="{{ url_for('index') }}">Înapoi la probleme</a>
 </body>
 </html>

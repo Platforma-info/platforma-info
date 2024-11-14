@@ -95,11 +95,13 @@ def evaluate_code(user_code, expected_output):
             text=True,
             timeout=5  # Mărit timeout-ul
         )
+        
         # Verificăm dacă rezultatul coincide cu rezultatul așteptat
         if result.stdout.strip() == expected_output.strip():
             flash("Corect! Răspunsul este exact.", 'success')
         else:
             flash(f"Greșit! Ai obținut '{result.stdout.strip()}', dar se aștepta '{expected_output}'.", 'danger')
+        
         return result.stdout.strip()  # Poți returna și ieșirea pentru debugging
 
     except subprocess.TimeoutExpired:
@@ -113,32 +115,23 @@ def evaluate_code(user_code, expected_output):
 @app.route('/problem/<int:problem_id>', methods=['GET', 'POST'])
 def problem(problem_id):
     problem = Problem.query.get(problem_id)
+    result = ""
     if request.method == 'POST':
         source_code = request.form['source_code']
         
-        # Verifică dacă soluția trimisă nu este goală
         if not source_code.strip():
             flash('Soluția nu poate fi goală!', 'error')
             return redirect(url_for('problem', problem_id=problem_id))
         
-        try:
-            # Evaluăm soluția trimisă
-            result = evaluate_code(source_code, problem.output_data)
-            
-            # Creăm o nouă trimitere cu rezultatul evaluării
-            new_submission = Submission(problem_id=problem.id, source_code=source_code, result=result)
-            db.session.add(new_submission)
-            db.session.commit()
-            
-            flash(result, 'info')  # Afișăm rezultatul ca mesaj flash
-            
-            return redirect(url_for('problem', problem_id=problem_id))
-        except Exception as e:
-            flash(f"A apărut o eroare: {str(e)}", 'error')
-            return redirect(url_for('problem', problem_id=problem_id))
+        result = evaluate_code(source_code, problem.output_data)  # Execută evaluarea
 
-    return render_template('problem.html', problem=problem)
-
+        new_submission = Submission(problem_id=problem.id, source_code=source_code, result=result)
+        db.session.add(new_submission)
+        db.session.commit()
+        
+        flash(result, 'info')  # Afișează rezultatul ca mesaj flash
+    
+    return render_template('problem.html', problem=problem, result=result)
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8000))
     with app.app_context():
