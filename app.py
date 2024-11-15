@@ -83,33 +83,34 @@ def logout():
     flash('Te-ai deconectat cu succes!', 'success')
     return redirect(url_for('login'))
 def evaluate_code(user_code, expected_output):
+    file_name = "user_submission.py"
     try:
         # Creăm un fișier temporar pentru codul utilizatorului
-        with open("user_submission.py", "w", encoding="utf-8") as f:
+        with open(file_name, "w", encoding="utf-8") as f:
             f.write(user_code)
         
         # Rulăm codul utilizatorului folosind subprocess și captăm rezultatul
         result = subprocess.run(
-            ["python3", "user_submission.py"],
+            ["python3", file_name],
             capture_output=True,
             text=True,
-            timeout=5  # Mărit timeout-ul
+            timeout=5  # Timeout pentru execuție
         )
         
         # Verificăm dacă rezultatul coincide cu rezultatul așteptat
         if result.stdout.strip() == expected_output.strip():
-            flash("Corect! Răspunsul este exact.", 'success')
+            return "Corect! Răspunsul este exact."
         else:
-            flash(f"Greșit! Ai obținut '{result.stdout.strip()}', dar se aștepta '{expected_output}'.", 'danger')
-        
-        return result.stdout.strip()  # Poți returna și ieșirea pentru debugging
+            return f"Greșit! Ai obținut '{result.stdout.strip()}', dar se aștepta '{expected_output}'."
 
     except subprocess.TimeoutExpired:
-        flash("Codul tău a rulat prea mult timp și a fost oprit.", 'error')
-        return "Codul a fost oprit din cauza unui timeout."
+        return "Codul tău a rulat prea mult timp și a fost oprit."
     except Exception as e:
-        flash(f"Eroare în rularea codului: {e}", 'error')
-        return f"Eroare: {e}"
+        return f"Eroare în rularea codului: {e}"
+    finally:
+        # Ștergem fișierul temporar
+        if os.path.exists(file_name):
+            os.remove(file_name)
 
 # Funcția care procesează trimiterea unei soluții
 @app.route('/problem/<int:problem_id>', methods=['GET', 'POST'])
