@@ -231,7 +231,7 @@ input {
 }
 
 .overlay {
-  background-image: url('image/image.gif');
+  background-image: url('image.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
