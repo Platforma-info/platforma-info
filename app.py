@@ -46,37 +46,44 @@ def index():
 
 @app.route('/auth', methods=['GET', 'POST'])
 def login_register():
-    # Verifică dacă utilizatorul este deja logat
+    # Verifică dacă utilizatorul este deja autentificat
     if 'user_id' in session:
         return redirect(url_for('index'))
 
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '').strip()
 
-        # Dacă acțiunea este de logare
+        # Validare de bază a câmpurilor
+        if not username or not password:
+            flash('Toate câmpurile sunt obligatorii!', 'danger')
+            return redirect(url_for('login_register'))
+
+        # Gestionare logare
         if 'login' in request.form:
             user = User.query.filter_by(username=username).first()
             if user and user.password == password:
                 session['user_id'] = user.id
                 flash('Te-ai autentificat cu succes!', 'success')
                 return redirect(url_for('index'))
-            flash('Username sau parolă incorecte!', 'danger')
-            return redirect(url_for('login_register'))
-
-        # Dacă acțiunea este de înregistrare
+            else:
+                flash('Username sau parolă incorecte!', 'danger')
+                return redirect(url_for('login_register'))
+        # Gestionare înregistrare
         elif 'register' in request.form:
             if User.query.filter_by(username=username).first():
                 flash('Numele de utilizator este deja folosit!', 'danger')
                 return redirect(url_for('login_register'))
-            
             new_user = User(username=username, password=password)
             db.session.add(new_user)
             db.session.commit()
-            flash('Cont creat cu succes!', 'success')
+            flash('Cont creat cu succes! Te poți autentifica acum.', 'success')
             return redirect(url_for('login_register'))
-
+    # Afișează un mesaj flash dacă utilizatorul tocmai s-a deconectat
+    if 'logout_message' in session:
+        flash(session.pop('logout_message'), 'info')
     return render_template('login_register.html')
+
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
