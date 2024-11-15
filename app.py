@@ -46,6 +46,10 @@ def index():
 
 @app.route('/auth', methods=['GET', 'POST'])
 def login_register():
+    # Verifică dacă utilizatorul este deja logat
+    if 'user_id' in session:
+        return redirect(url_for('index'))
+
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -59,6 +63,7 @@ def login_register():
                 return redirect(url_for('index'))
             flash('Username sau parolă incorecte!', 'danger')
             return redirect(url_for('login_register'))
+
         # Dacă acțiunea este de înregistrare
         elif 'register' in request.form:
             if User.query.filter_by(username=username).first():
@@ -70,6 +75,7 @@ def login_register():
             db.session.commit()
             flash('Cont creat cu succes!', 'success')
             return redirect(url_for('login_register'))
+
     return render_template('login_register.html')
 @app.route('/logout')
 def logout():
