@@ -37,14 +37,14 @@ class Submission(db.Model):
     problem = db.relationship('Problem', backref=db.backref('submissions', lazy=True))
 
 # Rute pentru aplicație
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     if 'user_id' not in session:
         return redirect(url_for('login_register'))
     problems = Problem.query.all()
     return render_template('index.html', problems=problems)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/auth', methods=['GET', 'POST'])
 def login_register():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -59,7 +59,6 @@ def login_register():
                 return redirect(url_for('index'))
             flash('Username sau parolă incorecte!', 'danger')
             return redirect(url_for('login_register'))
-
         # Dacă acțiunea este de înregistrare
         elif 'register' in request.form:
             if User.query.filter_by(username=username).first():
@@ -71,7 +70,6 @@ def login_register():
             db.session.commit()
             flash('Cont creat cu succes!', 'success')
             return redirect(url_for('login_register'))
-
     return render_template('login_register.html')
 @app.route('/logout')
 def logout():
