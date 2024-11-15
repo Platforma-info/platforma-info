@@ -39,12 +39,6 @@
         <textarea name="source_code" placeholder="Scrieți soluția aici..." required></textarea>
         <button type="submit">Submit</button>
     </form>
-    {% if result %}
-    <div class="result">
-        <p>Rezultatul execuției codului:</p>
-        <pre>{{ result }}</pre>
-    </div>
-{% endif %}
     <a href="{{ url_for('index') }}">Înapoi la probleme</a>
 </body>
 </html>

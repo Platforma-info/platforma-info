@@ -18,11 +18,14 @@
             </ul>
         {% endif %}
     {% endwith %}
+    
     <form method="POST">
         <input type="text" name="username" placeholder="Nume de utilizator" required>
         <input type="password" name="password" placeholder="Parolă" required>
+        <input type="password" name="confirm_password" placeholder="Confirmă parola" required>
         <button type="submit">Înregistrare</button>
     </form>
+    
     <p>Ai deja un cont? <a href="{{ url_for('login') }}">Autentifică-te!</a></p>
 </body>
 </html>
