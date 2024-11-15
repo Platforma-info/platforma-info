@@ -338,3 +338,6 @@ input {
 .flash-message.info {
   background-color: #2196F3;
 }
+.flash-message.danger {
+  background-color: #f44336;
+}
