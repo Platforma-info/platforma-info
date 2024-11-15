@@ -37,33 +37,31 @@ class Submission(db.Model):
     problem = db.relationship('Problem', backref=db.backref('submissions', lazy=True))
 
 # Rute pentru aplicație
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     if 'user_id' not in session:
         return redirect(url_for('login_register'))
     problems = Problem.query.all()
     return render_template('index.html', problems=problems)
 
-@app.route('/login_register', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login_register():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        action = request.form['action']  # Determină dacă este login sau register
-        
-        if action == 'login':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        # Dacă acțiunea este de logare
+        if 'login' in request.form:
             user = User.query.filter_by(username=username).first()
-            if user is None:
-                flash('Userul nu exista, fa-ti cont acum!', 'danger')
-                return redirect(url_for('login_register'))
-            elif user.password != password:
-                flash('Parola gresita!', 'danger')
-                return redirect(url_for('login_register'))
-            session['user_id'] = user.id
-            flash('Te-ai autentificat cu succes!', 'success')
-            return redirect(url_for('index'))
-        
-        elif action == 'register':
+            if user and user.password == password:
+                session['user_id'] = user.id
+                flash('Te-ai autentificat cu succes!', 'success')
+                return redirect(url_for('index'))
+            flash('Username sau parolă incorecte!', 'danger')
+            return redirect(url_for('login_register'))
+
+        # Dacă acțiunea este de înregistrare
+        elif 'register' in request.form:
             if User.query.filter_by(username=username).first():
                 flash('Numele de utilizator este deja folosit!', 'danger')
                 return redirect(url_for('login_register'))
@@ -73,9 +71,8 @@ def login_register():
             db.session.commit()
             flash('Cont creat cu succes!', 'success')
             return redirect(url_for('login_register'))
-    
-    return render_template('login_register.html')
 
+    return render_template('login_register.html')
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)

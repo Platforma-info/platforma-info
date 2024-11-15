@@ -14,16 +14,9 @@
     <div class="form-container register-container">
       <form method="POST" action="{{ url_for('login_register') }}">
         <h1>Register hire.</h1>
-        <input type="text" name="username" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <button type="submit" name="action" value="register">Register</button>
-        <span>or use your account</span>
-        <div class="social-container">
-          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social"><i class="lni lni-google"></i></a>
-          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div>
+        <button type="submit" name="register">Register</button>
       </form>
     </div>
 
@@ -31,24 +24,9 @@
     <div class="form-container login-container">
       <form method="POST" action="{{ url_for('login_register') }}">
         <h1>Login hire.</h1>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <div class="content">
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox" id="checkbox">
-            <label>Remember me</label>
-          </div>
-          <div class="pass-link">
-            <a href="#">Forgot password?</a>
-          </div>
-        </div>
-        <button type="submit" name="action" value="login">Login</button>
-        <span>or use your account</span>
-        <div class="social-container">
-          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social"><i class="lni lni-google"></i></a>
-          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div>
+        <button type="submit" name="login">Login</button>
       </form>
     </div>
 
