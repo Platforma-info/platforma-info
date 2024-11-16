@@ -107,7 +107,6 @@ def problem(problem_id):
         new_submission = Submission(problem_id=problem.id, source_code=source_code, result=result)
         db.session.add(new_submission)
         db.session.commit()
-        
         flash(result, 'info')  # Afișează rezultatul ca mesaj flash
     
     return render_template('problem.html', problem=problem, result=result)
@@ -130,6 +129,7 @@ def evaluate_code(user_code, expected_output):
         # Verificăm dacă rezultatul coincide cu rezultatul așteptat
         if result.stdout.strip() == expected_output.strip():
             return "Corect! Răspunsul este exact."
+            
         else:
             return f"Greșit! Ai obținut '{result.stdout.strip()}', dar se aștepta '{expected_output}'."
 
