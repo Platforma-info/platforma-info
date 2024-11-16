@@ -75,26 +75,7 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.flashes {
-    list-style-type: none;
-    padding: 0;
-}
 
-.flashes li {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.flashes .success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.flashes .danger {
-    background-color: #f8d7da;
-    color: #721c24;
-}
 .logout-btn {
     position: absolute; /* Fixarea poziției */
     top: 43px;          /* Distanța de sus */
@@ -114,3 +95,30 @@ button:hover {
     border-color: darkred;
     cursor: pointer;
 }
+.flash-messages {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .flash-message {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .flash-message.success {
+    background-color: #4CAF50;
+  }
+  
+  .flash-message.info {
+    background-color: #2196F3;
+  }
+  .flash-message.error {
+    background-color: #f44336;
+  }

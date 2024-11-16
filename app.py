@@ -94,6 +94,10 @@ def logout():
 @app.route('/problem/<int:problem_id>', methods=['GET', 'POST'])
 def problem(problem_id):
     problem = Problem.query.get(problem_id)
+    if not problem:
+        flash('Problema nu există!', 'error')
+        return redirect(url_for('index'))
+    
     result = ""
     if request.method == 'POST':
         source_code = request.form['source_code']
@@ -104,11 +108,16 @@ def problem(problem_id):
         
         result = evaluate_code(source_code, problem.output_data)  # Execută evaluarea
 
+        # Adaugă trimiterea în baza de date
         new_submission = Submission(problem_id=problem.id, source_code=source_code, result=result)
         db.session.add(new_submission)
         db.session.commit()
         
-        flash(result, 'info')  # Afișează rezultatul ca mesaj flash
+        # Afișează mesajul flash în funcție de rezultat
+        if "Corect" in result:
+            flash(result, 'success')  # Verde pentru succes
+        else:
+            flash(result, 'error')  # Roșu pentru eroare
     
     return render_template('problem.html', problem=problem, result=result)
 
@@ -141,6 +150,7 @@ def evaluate_code(user_code, expected_output):
         # Ștergem fișierul temporar
         if os.path.exists(file_name):
             os.remove(file_name)
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8000))
