@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auth</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
@@ -15,10 +16,21 @@
 <h1>Bun venit la platforma mea!</h1>
 {% endblock %}
   <div class="container" id="container">
+    <!-- Mesaje Flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% endwith %}
+
     <!-- Formul pentru înregistrare -->
     <div class="form-container register-container">
       <form method="POST" action="{{ url_for('login_register') }}">
-        <h1>Register hire.</h1>
+        <h1>Register here</h1>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit" name="register">Register</button>
@@ -28,7 +40,7 @@
     <!-- Formul pentru login -->
     <div class="form-container login-container">
       <form method="POST" action="{{ url_for('login_register') }}">
-        <h1>Login hire.</h1>
+        <h1>Login here</h1>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit" name="login">Login</button>
@@ -55,6 +67,6 @@
     </div>
   </div>
 
-  <script src="static/script.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

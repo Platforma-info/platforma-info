@@ -11,6 +11,7 @@ body {
 
 h1 {
     color: #333;
+    top: 20px;
 }
 
 /* Stil pentru header */
@@ -19,20 +20,6 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
-
-/* Stil pentru butonul de logout */
-.logout-button {
-    color: red; /* Culoare roșie pentru text */
-    text-decoration: none; /* Elimină sublinierea */
-    font-weight: bold;
-    border: none; /* Fără border */
-    background: transparent; /* Fundal transparent */
-    cursor: pointer; /* Arată că este clicabil */
-}
-
-.logout-button:hover {
-    text-decoration: underline; /* Sublinează la hover */
 }
 
 
@@ -88,23 +75,50 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.flashes {
-    list-style-type: none;
-    padding: 0;
-}
 
-.flashes li {
+.logout-btn {
+    position: absolute; /* Fixarea poziției */
+    top: 43px;          /* Distanța de sus */
+    right: 10px;        /* Distanța de dreapta */
+    color: red;         /* Culoarea textului */
+    text-decoration: none; /* Elimină sublinierea */
+    font-weight: bold;  /* Text îngroșat */
+    padding: 5px 10px;  /* Spațiere interioară */
+    border: 1px solid red; /* Chenar subțire */
+    border-radius: 5px; /* Colțuri rotunjite */
+    background-color: white; /* Fundal alb */
+    transition: all 0.3s ease; /* Tranziție pentru efecte hover */
+}
+.logout-btn:hover {
+    color: white;
+    background-color: red;
+    border-color: darkred;
+    cursor: pointer;
+}
+.flash-messages {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .flash-message {
     margin: 10px 0;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
-}
-
-.flashes .success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.flashes .danger {
-    background-color: #f8d7da;
-    color: #721c24;
-}
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .flash-message.success {
+    background-color: #4CAF50;
+  }
+  
+  .flash-message.info {
+    background-color: #2196F3;
+  }
+  .flash-message.error {
+    background-color: #f44336;
+  }

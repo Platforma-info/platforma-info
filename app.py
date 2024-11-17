@@ -46,37 +46,44 @@ def index():
 
 @app.route('/auth', methods=['GET', 'POST'])
 def login_register():
-    # Verifică dacă utilizatorul este deja logat
+    # Verifică dacă utilizatorul este deja autentificat
     if 'user_id' in session:
         return redirect(url_for('index'))
 
     if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '').strip()
 
-        # Dacă acțiunea este de logare
+        # Validare de bază a câmpurilor
+        if not username or not password:
+            flash('Toate câmpurile sunt obligatorii!', 'danger')
+            return redirect(url_for('login_register'))
+
+        # Gestionare logare
         if 'login' in request.form:
             user = User.query.filter_by(username=username).first()
             if user and user.password == password:
                 session['user_id'] = user.id
                 flash('Te-ai autentificat cu succes!', 'success')
                 return redirect(url_for('index'))
-            flash('Username sau parolă incorecte!', 'danger')
-            return redirect(url_for('login_register'))
-
-        # Dacă acțiunea este de înregistrare
+            else:
+                flash('Username sau parolă incorecte!', 'danger')
+                return redirect(url_for('login_register'))
+        # Gestionare înregistrare
         elif 'register' in request.form:
             if User.query.filter_by(username=username).first():
                 flash('Numele de utilizator este deja folosit!', 'danger')
                 return redirect(url_for('login_register'))
-            
             new_user = User(username=username, password=password)
             db.session.add(new_user)
             db.session.commit()
-            flash('Cont creat cu succes!', 'success')
+            flash('Cont creat cu succes! Te poți autentifica acum.', 'success')
             return redirect(url_for('login_register'))
-
+    # Afișează un mesaj flash dacă utilizatorul tocmai s-a deconectat
+    if 'logout_message' in session:
+        flash(session.pop('logout_message'), 'info')
     return render_template('login_register.html')
+
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
@@ -87,6 +94,10 @@ def logout():
 @app.route('/problem/<int:problem_id>', methods=['GET', 'POST'])
 def problem(problem_id):
     problem = Problem.query.get(problem_id)
+    if not problem:
+        flash('Problema nu există!', 'error')
+        return redirect(url_for('index'))
+    
     result = ""
     if request.method == 'POST':
         source_code = request.form['source_code']
@@ -97,11 +108,16 @@ def problem(problem_id):
         
         result = evaluate_code(source_code, problem.output_data)  # Execută evaluarea
 
+        # Adaugă trimiterea în baza de date
         new_submission = Submission(problem_id=problem.id, source_code=source_code, result=result)
         db.session.add(new_submission)
         db.session.commit()
         
-        flash(result, 'info')  # Afișează rezultatul ca mesaj flash
+        # Afișează mesajul flash în funcție de rezultat
+        if "Corect" in result:
+            flash(result, 'success')  # Verde pentru succes
+        else:
+            flash(result, 'error')  # Roșu pentru eroare
     
     return render_template('problem.html', problem=problem, result=result)
 
@@ -134,6 +150,11 @@ def evaluate_code(user_code, expected_output):
         # Ștergem fișierul temporar
         if os.path.exists(file_name):
             os.remove(file_name)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    flash('Pagina nu există!', 'error')  # Flash cu roșu pentru eroare
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8000))
