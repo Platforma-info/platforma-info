@@ -1,10 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const loader = document.getElementById("loader");
-    const mainContent = document.getElementById("main-content");
+    if (loader) {
+        setTimeout(function() {
+            loader.style.opacity = "0"; // Inițiază fade out-ul
+        }, 500); // După 1.5 secunde începe fade-out-ul
 
-    // Simulează un timeout pentru loader
-    setTimeout(() => {
-        loader.style.display = "none"; // Ascunde loader-ul
-        mainContent.style.visibility = "visible"; // Arată conținutul principal
-    }, 500); // Schimbă durata dacă e nevoie
+        // După ce fade-ul s-a terminat, ascunde complet loader-ul
+        setTimeout(function() {
+            loader.style.display = "none"; // Ascunde loader-ul după fade
+        }, 1000); // După 2.5 secunde (timpul complet pentru fade-out)
+    }
 });

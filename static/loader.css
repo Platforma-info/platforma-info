@@ -1,37 +1,32 @@
-/* Stiluri pentru loader */
-.loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .loader {
-    border: 6px solid #f3f3f3; /* Background-ul cercului */
-    border-top: 6px solid #3498db; /* Culoarea loader-ului */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
+/* Center the loader */
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 1s ease-out; /* Adaugă tranziție pentru fade */
+}
+
+/* Rotating image */
+#loader img {
+  width: 300px; /* Adjust size as needed */
+  height: 300px;
+  animation: spin 2.5s linear infinite;
+}
+
+/* Keyframes for rotation */
+@keyframes spin {
+  from {
       transform: rotate(0deg);
-    }
-    100% {
+  }
+  to {
       transform: rotate(360deg);
-    }
   }
-  
-  /* Ascunde pagina principală inițial */
-  #main-content {
-    visibility: hidden;
-  }
-  
+}
