@@ -8,8 +8,13 @@
   <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
 </head>
 <body>
+  <div id="loader">
+    <img src="{{ url_for('static', filename='favicon.png') }}" alt="Loading...">
+  </div>
+  <div id="main-content">
   <div class="container" id="container">
     <!-- Mesaje Flash -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -61,7 +66,8 @@
       </div>
     </div>
   </div>
-
+</div>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="{{ url_for('static', filename='loader.js') }}"></script>
 </body>
 </html>
