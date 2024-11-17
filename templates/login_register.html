@@ -8,13 +8,13 @@
   <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
 </head>
 <body>
-  {% extends "base.html" %}
-{% block title %}Pagina Mea{% endblock %}
-{% block content %}
-<h1>Bun venit la platforma mea!</h1>
-{% endblock %}
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+  </div>
+  <div id="main-content">
   <div class="container" id="container">
     <!-- Mesaje Flash -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -66,7 +66,8 @@
       </div>
     </div>
   </div>
-
+</div>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="{{ url_for('static', filename='loader.js') }}"></script>
 </body>
 </html>

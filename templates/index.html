@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Probleme</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
-    {% extends "base.html" %}
-{% block title %}Pagina Mea{% endblock %}
-{% block content %}
-<h1>Bun venit la platforma mea!</h1>
-{% endblock %}
-    <h1>Probleme</h1>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <div class="flash-messages">
-                {% for category, message in messages %}
-                    <div class="flash-message {{ category }}">{{ message }}</div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
-    
-    <ul>
-        {% for problem in problems %}
-            <li><a href="{{ url_for('problem', problem_id=problem.id) }}">{{ problem.description }}</a></li>
-        {% endfor %}
-    </ul>
+    <!-- Loader -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Conținutul paginii -->
+    <div class="container" id="main-content">
+        <h1>Probleme</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <ul>
+            {% for problem in problems %}
+                <li><a href="{{ url_for('problem', problem_id=problem.id) }}">{{ problem.description }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 
     <a href="{{ url_for('logout') }}" class="logout-btn">Deconectare</a>
+    <script src="{{ url_for('static', filename='loader.js') }}"></script>
 </body>
 </html>

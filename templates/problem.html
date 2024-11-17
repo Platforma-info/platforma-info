@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Problemă</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loader.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
 </head>
 <body>
-    {% extends "base.html" %}
-{% block title %}Pagina Mea{% endblock %}
-{% block content %}
-<h1>Bun venit la platforma mea!</h1>
-{% endblock %}
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+    <div id="main-content">
     <h1>Problemă</h1>
     <!-- Mesaj flash pentru rezultat -->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -44,5 +44,8 @@
         <button type="submit">Submit</button>
     </form>
     <a href="{{ url_for('index') }}">Înapoi la probleme</a>
+    <a href="{{ url_for('logout') }}" class="logout-btn">Deconectare</a>
+    </div>
+    <script src="{{ url_for('static', filename='loader.js') }}"></script>
 </body>
 </html>
