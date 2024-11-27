@@ -1,0 +1,32 @@
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark button {
+    background-color: #121212;
+    color: #ffffff;
+    border: 1px solid #1f1f1f;
+    position: absolute; /* Fixarea poziției */
+    top: 73px;          /* Distanța de sus */
+    right: 10px;        /* Distanța de dreapta */
+    transition: all 0.3s ease; /* Tranziție pentru efecte hover */
+}
+body button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: 1px solid #007BFF;
+    position: absolute; /* Fixarea poziției */
+    top: 73px;          /* Distanța de sus */
+    right: 10px;        /* Distanța de dreapta */
+    transition: all 0.3s ease; /* Tranziție pentru efecte hover */
+}
+/* Alte elemente */
+body.dark .flash-message {
+    background-color: #333333;
+    color: #ffffff;
+}
+body.dark h1 {
+    color: white;
+}

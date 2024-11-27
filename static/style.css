@@ -89,6 +89,19 @@ button:hover {
     background-color: white; /* Fundal alb */
     transition: all 0.3s ease; /* Tranziție pentru efecte hover */
 }
+.logout-btn.dark {
+    position: absolute; /* Fixarea poziției */
+    top: 43px;          /* Distanța de sus */
+    right: 10px;        /* Distanța de dreapta */
+    color: red;         /* Culoarea textului */
+    text-decoration: none; /* Elimină sublinierea */
+    font-weight: bold;  /* Text îngroșat */
+    padding: 5px 10px;  /* Spațiere interioară */
+    border: 1px solid red; /* Chenar subțire */
+    border-radius: 5px; /* Colțuri rotunjite */
+    background-color: #121212; /* Fundal */
+    transition: all 0.3s ease; /* Tranziție pentru efecte hover */
+}
 .logout-btn:hover {
     color: white;
     background-color: red;
@@ -122,3 +135,4 @@ button:hover {
   .flash-message.error {
     background-color: #f44336;
   }
+  

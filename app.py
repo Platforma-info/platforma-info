@@ -150,12 +150,17 @@ def evaluate_code(user_code, expected_output):
         # Ștergem fișierul temporar
         if os.path.exists(file_name):
             os.remove(file_name)
-
+@app.route('/toggle-dark-mode', methods=['POST'])
+def toggle_dark_mode():
+    if 'dark' in session:
+        session.pop('dark')
+    else:
+        session['dark'] = True
+    return '', 204  # Răspuns fără conținut
 @app.errorhandler(404)
 def page_not_found(e):
     flash('Pagina nu există!', 'error')  # Flash cu roșu pentru eroare
     return redirect(url_for('index'))
-
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8000))
     with app.app_context():
