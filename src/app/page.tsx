@@ -20,7 +20,7 @@ export default async function Home() {
           Rezolvă probleme de programare. Primește verdict instant.
         </h1>
         <p className="max-w-xl text-lg text-muted-foreground">
-          platforma-info este locul unde exersezi algoritmi în Python, îți vezi
+          PyInfo este locul unde exersezi algoritmi în Python, îți vezi
           istoricul de trimiteri și progresul, într-un mediu sigur și rapid.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">

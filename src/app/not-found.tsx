@@ -8,7 +8,7 @@ export default function NotFound() {
       <CompassIcon className="size-10 text-muted-foreground" />
       <h1 className="text-2xl font-semibold tracking-tight">Pagina nu există</h1>
       <p className="max-w-sm text-sm text-muted-foreground">
-        Link-ul pe care l-ai accesat nu corespunde niciunei pagini din platforma-info.
+        Link-ul pe care l-ai accesat nu corespunde niciunei pagini din PyInfo.
       </p>
       <Button asChild>
         <Link href="/problems">Înapoi la probleme</Link>

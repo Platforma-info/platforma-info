@@ -1,4 +1,4 @@
-# platforma-info
+# PyInfo
 
 Platformă de probleme de programare cu evaluare automată a soluțiilor.
 Utilizatorii se înregistrează, rezolvă probleme de programare în Python și

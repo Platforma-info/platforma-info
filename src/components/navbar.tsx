@@ -14,7 +14,7 @@ export async function Navbar() {
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
           <CodeXml className="size-5 text-primary" />
-          <span>platforma-info</span>
+          <span>PyInfo</span>
         </Link>
 
         <nav className="flex items-center gap-1">
