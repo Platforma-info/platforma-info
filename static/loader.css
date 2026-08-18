@@ -13,7 +13,9 @@
   opacity: 1;
   transition: opacity 1s ease-out; /* Adaugă tranziție pentru fade */
 }
-
+body.dark #loader {
+  background-color: #121212;
+}
 /* Rotating image */
 #loader img {
   width: 300px; /* Adjust size as needed */

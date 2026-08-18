@@ -3,6 +3,7 @@
 Această platformă de codare permite utilizatorilor să rezolve probleme de programare și să își trimită soluțiile. Aplicația este construită folosind Flask și utilizează o bază de date SQLite pentru a gestiona utilizatorii și problemele de programare.
 
 https://platformainfo.koyeb.app/
+
 ## Funcționalități
 
 1. **Autentificare și Înregistrare**:

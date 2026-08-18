@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Problemă</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loader.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
-</head>
-<body>
-    <div id="loader">
-        <img src="{{ url_for('static', filename='favicon.png') }}" alt="Loading...">
-    </div>
-    <div id="main-content">
-    <h1>Problemă</h1>
-    <!-- Mesaj flash pentru rezultat -->
+{% extends "base.html" %}
+
+{% block title %}Problema {{ problem.id }}{% endblock %}
+
+{% block content %}
+<!-- Loader -->
+<div id="loader">
+    <img src="{{ url_for('static', filename='favicon.png') }}" alt="Loading...">
+</div>
+
+<!-- Conținutul principal -->
+<div class="container" id="main-content">
+    <h1>{{ problem.description }}</h1>
+
+    <!-- Mesaje Flash -->
     {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div class="flash-messages">
-        {% for category, message in messages %}
-            <div class="flash-message {{ category }}">{{ message }}</div>
-        {% endfor %}
-    </div>
-    {% endif %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
     {% endwith %}
-    
-    <div class="description">
-        <h2>Enunț:</h2>
-        <p>{{ problem.description }}</p>
+
+    <!-- Detalii problemă -->
+    <div class="problem-details">
+        <h2>Detalii:</h2>
+        <p><strong>Input:</strong> {{ problem.input_data }}</p>
+        <p><strong>Output așteptat:</strong> {{ problem.output_data }}</p>
     </div>
-    
-    <div class="input">
-        <h2>Input:</h2>
-        <p>{{ problem.input_data }}</p>
-    </div>
-    
-    <div class="output">
-        <h2>Output:</h2>
-        <p>{{ problem.output_data }}</p>
-    </div>
-    
-    <form method="POST">
-        <textarea name="source_code" placeholder="Scrieți soluția aici..." ></textarea>
-        <button type="submit">Submit</button>
+
+    <!-- Form pentru trimitere soluție -->
+    <form method="POST" action="{{ url_for('problem', problem_id=problem.id) }}" class="solution-form">
+        <textarea name="source_code" placeholder="Scrie codul tău aici..." required></textarea>
+        <!-- Butonul mutat acum sub textarea -->
+        <button type="submit">Trimite soluția</button>
     </form>
-    <a href="{{ url_for('index') }}">Înapoi la probleme</a>
-    <a href="{{ url_for('logout') }}" class="logout-btn">Deconectare</a>
-    </div>
-    <script src="{{ url_for('static', filename='loader.js') }}"></script>
-</body>
-</html>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='loader.js') }}"></script>
+{% endblock %}

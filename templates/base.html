@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Platforma{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dark_mode.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loader.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+<body class="{% if session.get('dark') %}dark{% endif %}">
+    <header>
+        <nav>
+            <a href="{{ url_for('logout') }}" class="logout-btn {% if session.get('dark') %}dark{% endif %}">Deconectare</a>
+            <!-- Butonul pentru Dark Mode -->
+            <button id="dark-mode-toggle" title="Comută între temă deschisă și temă întunecată">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Platforma Info</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='dark_mode.js') }}"></script>
+    <script src="{{ url_for('static', filename='loader.js') }}"></script>
+    <script>
+        // JavaScript pentru a ascunde mesajele flash după 5 secunde
+        window.onload = function() {
+            // Selectează toate mesajele flash
+            const flashMessages = document.querySelectorAll('.flash-message');
+            
+            // Ascunde fiecare mesaj flash după 5 secunde
+            flashMessages.forEach(function(message) {
+                setTimeout(function() {
+                    message.style.opacity = 0; // Se face invizibil
+                    message.style.transition = 'opacity 1s'; // Efecțul de tranziție
+                    setTimeout(function() {
+                        message.style.display = 'none'; // Se ascunde complet după tranziție
+                    }, 1000); // După 1 secundă
+                }, 3000); // După 5 secunde
+            });
+        };
+    </script>
+</body>
+</html>
