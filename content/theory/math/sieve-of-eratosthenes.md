@@ -1,9 +1,9 @@
 ---
-title: Sieve of Eratosthenes
+title: "Sieve of Eratosthenes"
 section: Prime numbers
 order: 1
 difficulty: beginner
-summary: Find all primes up to n in O(n log log n), then make it fast in Python with slice assignment, and extend it to segments and smallest prime factors.
+summary: "Find all primes up to n in O(n log log n), then make it fast in Python with slice assignment, and extend it to segments and smallest prime factors."
 tags: [primes, sieve, number theory, factorization]
 prerequisites: [math/euclidean-algorithm]
 problems: [numar-prim]

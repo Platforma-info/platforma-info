@@ -1,9 +1,9 @@
 ---
-title: Heaps, Deques and Bisect
+title: "Heaps, Deques and Bisect"
 section: Standard library toolbox
 order: 2
 difficulty: intermediate
-summary: Priority queues with heapq, O(1) queues with deque, and binary search on sorted lists with bisect.
+summary: "Priority queues with heapq, O(1) queues with deque, and binary search on sorted lists with bisect."
 tags: [heapq, deque, bisect, priority queue]
 prerequisites: [python-contests/standard-library-toolbox]
 ---

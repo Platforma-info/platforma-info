@@ -1,9 +1,9 @@
 ---
-title: Your First Python Program
+title: "Your First Python Program"
 section: Getting started
 order: 1
 difficulty: beginner
-summary: What programming is, how to run Python, how comments, modules and pip work, and how PyInfo judges a solution.
+summary: "What programming is, how to run Python, how comments, modules and pip work, and how PyInfo judges a solution."
 tags: [basics, setup, modules, pip]
 prerequisites: []
 ---

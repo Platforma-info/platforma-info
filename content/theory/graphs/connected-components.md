@@ -1,9 +1,9 @@
 ---
-title: Connected Components
+title: "Connected Components"
 section: Connectivity
 order: 1
 difficulty: beginner
-summary: Split an undirected graph into its connected pieces with a traversal (or a DSU) and count or label them.
+summary: "Split an undirected graph into its connected pieces with a traversal (or a DSU) and count or label them."
 tags: [connected components, dfs, bfs, dsu]
 prerequisites: [graphs/breadth-first-search]
 source:

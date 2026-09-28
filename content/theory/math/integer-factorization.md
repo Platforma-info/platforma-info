@@ -1,9 +1,9 @@
 ---
-title: Integer Factorization
+title: "Integer Factorization"
 section: Prime numbers
 order: 3
 difficulty: advanced
-summary: Break a number into primes with trial division, a smallest-prime-factor sieve, Fermat's method and Pollard's rho for numbers up to 10^18 and beyond.
+summary: "Break a number into primes with trial division, a smallest-prime-factor sieve, Fermat's method and Pollard's rho for numbers up to 10^18 and beyond."
 tags: [factorization, pollard rho, primes, number theory]
 prerequisites: [math/primality-tests]
 source:

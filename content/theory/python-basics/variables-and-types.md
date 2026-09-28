@@ -1,9 +1,9 @@
 ---
-title: Variables and Data Types
+title: "Variables and Data Types"
 section: Data and text
 order: 1
 difficulty: beginner
-summary: Variables, the core types (int, float, str, bool), operators, type conversion and reading input.
+summary: "Variables, the core types (int, float, str, bool), operators, type conversion and reading input."
 tags: [basics, types, operators, input]
 prerequisites: [python-basics/first-program]
 problems: [suma-a-doua-numere, celsius-fahrenheit]

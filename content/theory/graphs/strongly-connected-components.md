@@ -1,9 +1,9 @@
 ---
-title: Strongly Connected Components
+title: "Strongly Connected Components"
 section: Connectivity
 order: 4
 difficulty: advanced
-summary: Partition a directed graph into mutually reachable groups with Kosaraju's or Tarjan's algorithm, and build the condensation DAG.
+summary: "Partition a directed graph into mutually reachable groups with Kosaraju's or Tarjan's algorithm, and build the condensation DAG."
 tags: [scc, kosaraju, tarjan, condensation, directed graphs]
 prerequisites: [graphs/depth-first-search]
 source:

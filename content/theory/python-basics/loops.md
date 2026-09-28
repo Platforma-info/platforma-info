@@ -1,9 +1,9 @@
 ---
-title: Loops
+title: "Loops"
 section: Control flow
 order: 2
 difficulty: beginner
-summary: while and for loops, range, break / continue / else, enumerate and zip, and nested loops.
+summary: "while and for loops, range, break / continue / else, enumerate and zip, and nested loops."
 tags: [loops, range, iteration]
 prerequisites: [python-basics/conditionals, python-basics/lists-and-tuples]
 problems: [suma-cifrelor, suma-numere-impare, numar-prim]

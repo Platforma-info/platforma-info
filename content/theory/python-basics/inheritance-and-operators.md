@@ -1,9 +1,9 @@
 ---
-title: Inheritance and Operator Overloading
+title: "Inheritance and Operator Overloading"
 section: Objects
 order: 2
 difficulty: intermediate
-summary: Reuse behaviour with inheritance, override methods, call super(), and teach your classes to work with +, ==, < and len.
+summary: "Reuse behaviour with inheritance, override methods, call super(), and teach your classes to work with +, ==, < and len."
 tags: [oop, inheritance, operators, dunder]
 prerequisites: [python-basics/classes-and-objects]
 ---

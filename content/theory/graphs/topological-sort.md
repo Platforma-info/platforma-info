@@ -1,9 +1,9 @@
 ---
-title: Topological Sorting
+title: "Topological Sorting"
 section: Ordering
 order: 1
 difficulty: intermediate
-summary: Order the vertices of a DAG so that every edge goes forward, with Kahn's algorithm or DFS, and use it for dependency and DP problems.
+summary: "Order the vertices of a DAG so that every edge goes forward, with Kahn's algorithm or DFS, and use it for dependency and DP problems."
 tags: [topological sort, dag, kahn, dependencies]
 prerequisites: [graphs/depth-first-search]
 source:

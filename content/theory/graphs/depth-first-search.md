@@ -1,9 +1,9 @@
 ---
-title: Depth-First Search
+title: "Depth-First Search"
 section: Graph traversal
 order: 3
 difficulty: beginner
-summary: Explore a graph as deep as possible before backtracking; entry and exit times, edge classification, and how to avoid Python's recursion limit.
+summary: "Explore a graph as deep as possible before backtracking; entry and exit times, edge classification, and how to avoid Python's recursion limit."
 tags: [dfs, traversal, recursion, stack, timestamps]
 prerequisites: [graphs/graph-basics, python-basics/recursion]
 source:

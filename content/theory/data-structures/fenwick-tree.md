@@ -1,9 +1,9 @@
 ---
-title: Fenwick Tree (Binary Indexed Tree)
+title: "Fenwick Tree (Binary Indexed Tree)"
 section: Trees
 order: 2
 difficulty: intermediate
-summary: Prefix sums with point updates in O(log n) using a tiny array, plus range updates and finding the k-th element.
+summary: "Prefix sums with point updates in O(log n) using a tiny array, plus range updates and finding the k-th element."
 tags: [fenwick, bit, prefix sums, range queries]
 prerequisites: [math/bit-manipulation]
 source:

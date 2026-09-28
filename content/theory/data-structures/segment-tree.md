@@ -1,9 +1,9 @@
 ---
-title: Segment Tree
+title: "Segment Tree"
 section: Trees
 order: 3
 difficulty: advanced
-summary: Answer range queries (sum, min, max, gcd, ...) and point updates in O(log n), then add lazy propagation for range updates.
+summary: "Answer range queries (sum, min, max, gcd, ...) and point updates in O(log n), then add lazy propagation for range updates."
 tags: [segment tree, range queries, lazy propagation, monoid]
 prerequisites: [data-structures/fenwick-tree]
 source:

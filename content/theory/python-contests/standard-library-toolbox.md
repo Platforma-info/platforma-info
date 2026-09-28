@@ -1,9 +1,9 @@
 ---
-title: The Standard-Library Toolbox
+title: "The Standard-Library Toolbox"
 section: Standard library toolbox
 order: 1
 difficulty: intermediate
-summary: The built-ins and modules that replace pages of hand-written code: math, collections, itertools, functools, sorting.
+summary: "The built-ins and modules that replace pages of hand-written code: math, collections, itertools, functools, sorting."
 tags: [stdlib, collections, itertools, math, functools]
 prerequisites: [python-basics/comprehensions-and-functional-tools]
 ---

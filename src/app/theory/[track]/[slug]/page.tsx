@@ -51,7 +51,7 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
   const track = TRACKS_BY_SLUG[trackSlug];
   if (!article || !track) notFound();
 
-  const { html, headings } = await renderMarkdown(article.body);
+  const { html, headings } = await renderMarkdown(article.body, `${article.track}/${article.slug}`);
   const { prev, next } = getAdjacentArticles(article);
   const prerequisites = getPrerequisites(article);
   const id = `${article.track}/${article.slug}`;
@@ -155,26 +155,38 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
           </section>
         )}
 
-        <div className="mt-12 flex flex-wrap items-center justify-between gap-3 border-t pt-6">
+        <div className="mt-12 border-t pt-6">
           <CompleteButton id={id} />
-          <div className="flex gap-2">
-            {prev && (
-              <Button asChild variant="outline">
-                <Link href={articleHref(prev)} rel="prev">
-                  <ArrowLeft className="size-4" />
-                  <span className="max-w-40 truncate">{prev.title}</span>
-                </Link>
-              </Button>
+          <nav aria-label="Previous and next article" className="mt-6 grid gap-3 sm:grid-cols-2">
+            {prev ? (
+              <Link
+                href={articleHref(prev)}
+                rel="prev"
+                className="flex min-w-0 items-center gap-3 rounded-lg border p-3 transition-colors hover:border-primary/40 hover:bg-muted/40"
+              >
+                <ArrowLeft className="size-4 shrink-0 text-muted-foreground" />
+                <span className="min-w-0">
+                  <span className="block text-xs text-muted-foreground">Previous</span>
+                  <span className="block truncate font-medium">{prev.title}</span>
+                </span>
+              </Link>
+            ) : (
+              <span className="hidden sm:block" />
             )}
             {next && (
-              <Button asChild variant="outline">
-                <Link href={articleHref(next)} rel="next">
-                  <span className="max-w-40 truncate">{next.title}</span>
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
+              <Link
+                href={articleHref(next)}
+                rel="next"
+                className="flex min-w-0 items-center justify-end gap-3 rounded-lg border p-3 text-right transition-colors hover:border-primary/40 hover:bg-muted/40"
+              >
+                <span className="min-w-0">
+                  <span className="block text-xs text-muted-foreground">Next</span>
+                  <span className="block truncate font-medium">{next.title}</span>
+                </span>
+                <ArrowRight className="size-4 shrink-0 text-muted-foreground" />
+              </Link>
             )}
-          </div>
+          </nav>
         </div>
 
         {article.source && (

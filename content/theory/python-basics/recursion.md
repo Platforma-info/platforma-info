@@ -1,9 +1,9 @@
 ---
-title: Recursion
+title: "Recursion"
 section: Functions
 order: 2
 difficulty: beginner
-summary: Functions that call themselves: base case, recursive case, the call stack, Python's recursion limit and memoization.
+summary: "Functions that call themselves: base case, recursive case, the call stack, Python's recursion limit and memoization."
 tags: [recursion, call stack, memoization]
 prerequisites: [python-basics/functions]
 problems: [factorial]

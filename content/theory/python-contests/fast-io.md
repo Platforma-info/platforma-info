@@ -1,9 +1,9 @@
 ---
-title: Fast Input and Output
+title: "Fast Input and Output"
 section: Input and output
 order: 1
 difficulty: beginner
-summary: Read large inputs and print large outputs quickly, and the templates for the most common input formats.
+summary: "Read large inputs and print large outputs quickly, and the templates for the most common input formats."
 tags: [io, stdin, performance, templates]
 prerequisites: [python-basics/variables-and-types]
 ---

@@ -1,9 +1,9 @@
 ---
-title: Z-function
+title: "Z-function"
 section: Fundamentals
 order: 3
 difficulty: intermediate
-summary: For every position, the length of the longest common prefix with the whole string, in O(n), and its uses in matching and periods.
+summary: "For every position, the length of the longest common prefix with the whole string, in O(n), and its uses in matching and periods."
 tags: [z-function, pattern matching, prefix, periods]
 prerequisites: [strings/prefix-function]
 source:

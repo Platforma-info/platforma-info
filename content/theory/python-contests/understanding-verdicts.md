@@ -1,9 +1,9 @@
 ---
-title: Understanding Verdicts
+title: "Understanding Verdicts"
 section: Input and output
 order: 2
 difficulty: beginner
-summary: What Accepted, Wrong answer, Runtime error and Time limit exceeded mean on PyInfo, and a checklist for each failure.
+summary: "What Accepted, Wrong answer, Runtime error and Time limit exceeded mean on PyInfo, and a checklist for each failure."
 tags: [judge, debugging, verdicts]
 prerequisites: [python-basics/first-program]
 ---

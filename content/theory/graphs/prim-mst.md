@@ -3,7 +3,7 @@ title: "Minimum Spanning Tree: Prim's Algorithm"
 section: Spanning trees
 order: 2
 difficulty: intermediate
-summary: Grow the spanning tree from one vertex by always adding the cheapest edge leaving it, in O(m log n) with a heap or O(n²) for dense graphs.
+summary: "Grow the spanning tree from one vertex by always adding the cheapest edge leaving it, in O(m log n) with a heap or O(n²) for dense graphs."
 tags: [mst, prim, heap, greedy]
 prerequisites: [graphs/kruskal-mst, graphs/dijkstra]
 source:

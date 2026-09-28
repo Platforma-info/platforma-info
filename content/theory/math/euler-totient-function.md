@@ -1,9 +1,9 @@
 ---
-title: Euler's Totient Function
+title: "Euler's Totient Function"
 section: Number-theoretic functions
 order: 1
 difficulty: intermediate
-summary: Count the integers up to n that are coprime to n, compute φ(n) from the factorization or for all n at once, and apply Euler's theorem.
+summary: "Count the integers up to n that are coprime to n, compute φ(n) from the factorization or for all n at once, and apply Euler's theorem."
 tags: [totient, euler, number theory, modular arithmetic]
 prerequisites: [math/integer-factorization]
 source:

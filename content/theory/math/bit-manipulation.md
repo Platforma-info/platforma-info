@@ -1,9 +1,9 @@
 ---
-title: Bit Manipulation
+title: "Bit Manipulation"
 section: Bits
 order: 1
 difficulty: intermediate
-summary: Binary numbers, bitwise operators, the classic tricks (lowest set bit, popcount, powers of two) and how to iterate over subsets with masks.
+summary: "Binary numbers, bitwise operators, the classic tricks (lowest set bit, popcount, powers of two) and how to iterate over subsets with masks."
 tags: [bits, bitmask, xor, binary]
 prerequisites: [python-basics/variables-and-types]
 source:

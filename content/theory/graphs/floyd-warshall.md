@@ -1,9 +1,9 @@
 ---
-title: Floyd-Warshall Algorithm
+title: "Floyd-Warshall Algorithm"
 section: Shortest paths
 order: 4
 difficulty: intermediate
-summary: All-pairs shortest paths in O(n³) with three nested loops, path reconstruction, negative cycles, and a much faster Python formulation.
+summary: "All-pairs shortest paths in O(n³) with three nested loops, path reconstruction, negative cycles, and a much faster Python formulation."
 tags: [floyd-warshall, all pairs, shortest path, dp]
 prerequisites: [graphs/graph-basics]
 source:

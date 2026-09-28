@@ -1,9 +1,9 @@
 ---
-title: Introduction to Dynamic Programming
+title: "Introduction to Dynamic Programming"
 section: Introduction
 order: 1
 difficulty: intermediate
-summary: Avoid repeated work by remembering subproblem results: memoization, bottom-up tables, and the recipe for designing a DP solution.
+summary: "Avoid repeated work by remembering subproblem results: memoization, bottom-up tables, and the recipe for designing a DP solution."
 tags: [dp, memoization, tabulation, recursion]
 prerequisites: [python-basics/recursion]
 source:

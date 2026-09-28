@@ -1,9 +1,9 @@
 ---
-title: Knapsack Problem
+title: "Knapsack Problem"
 section: Classic problems
 order: 1
 difficulty: intermediate
-summary: 0-1, complete and bounded knapsack in one array, with the loop directions that make each version work, and a big-integer bitset trick for subset sum.
+summary: "0-1, complete and bounded knapsack in one array, with the loop directions that make each version work, and a big-integer bitset trick for subset sum."
 tags: [knapsack, dp, subset sum, bitset]
 prerequisites: [dynamic-programming/introduction-to-dp]
 source:

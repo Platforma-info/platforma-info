@@ -33,9 +33,24 @@ npm run db:seed       # populează problemele inițiale
 npm run dev
 ```
 
+## Teorie (`/theory`)
+
+Secțiune publică cu articole de teorie: Python de la zero, Python pentru concursuri și algoritmi
+(teoria numerelor, structuri de date, DP, stringuri, grafuri, combinatorică), fiecare cu cod Python testat.
+
+- Conținutul este în `content/theory/<track>/<articol>.md` (Markdown + front-matter, matematică KaTeX, cod Shiki).
+- Track-urile și secțiunile lor sunt declarate în `src/lib/theory/tracks.ts`; loader-ul (`src/lib/theory/content.ts`)
+  validează front-matter-ul, secțiunile și trimiterile între articole.
+- `npm run theory:check` validează front-matter-ul și **rulează tot codul Python** din articole, verificând și link-urile interne.
+- Articolele cu `source:` în front-matter sunt adaptări după [cp-algorithms.com](https://cp-algorithms.com)
+  (CC BY-SA 4.0); vezi `content/theory/NOTICE.md`.
+- Progresul de citire se păstrează în `localStorage` (fără modificări în baza de date).
+
 ## Structură
 
 - `src/app` — pagini și server actions (App Router)
+- `content/theory` — articolele de teorie
+- `src/lib/theory` — încărcarea și randarea articolelor
 - `src/db` — schema Drizzle și scriptul de seed
 - `src/lib/auth.ts` — sesiuni și hashing parole
 - `src/lib/judge.ts` — execuția codului în Vercel Sandbox

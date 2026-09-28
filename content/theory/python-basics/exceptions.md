@@ -1,9 +1,9 @@
 ---
-title: Exceptions
+title: "Exceptions"
 section: Files and errors
 order: 2
 difficulty: beginner
-summary: What runtime errors are, how to catch them with try / except / else / finally, and how to raise your own.
+summary: "What runtime errors are, how to catch them with try / except / else / finally, and how to raise your own."
 tags: [errors, try, except, raise]
 prerequisites: [python-basics/functions]
 ---

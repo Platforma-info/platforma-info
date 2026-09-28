@@ -1,9 +1,9 @@
 ---
-title: Primality Tests
+title: "Primality Tests"
 section: Prime numbers
 order: 2
 difficulty: intermediate
-summary: Decide whether a single large number is prime: trial division, the Fermat test, and the deterministic Miller-Rabin test for 64-bit integers.
+summary: "Decide whether a single large number is prime: trial division, the Fermat test, and the deterministic Miller-Rabin test for 64-bit integers."
 tags: [primes, miller-rabin, fermat, modular arithmetic]
 prerequisites: [math/sieve-of-eratosthenes, math/binary-exponentiation]
 problems: [numar-prim]

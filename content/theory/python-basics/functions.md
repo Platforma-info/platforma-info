@@ -1,9 +1,9 @@
 ---
-title: Functions
+title: "Functions"
 section: Functions
 order: 1
 difficulty: beginner
-summary: Defining functions, parameters and return values, default and keyword arguments, *args/**kwargs, scope and lambda.
+summary: "Defining functions, parameters and return values, default and keyword arguments, *args/**kwargs, scope and lambda."
 tags: [functions, arguments, scope, lambda]
 prerequisites: [python-basics/loops]
 ---

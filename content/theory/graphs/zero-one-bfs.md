@@ -1,9 +1,9 @@
 ---
-title: 0-1 BFS
+title: "0-1 BFS"
 section: Shortest paths
 order: 3
 difficulty: intermediate
-summary: Shortest paths in a graph whose edges weigh 0 or 1 in O(n + m) with a deque, and Dial's algorithm for small integer weights.
+summary: "Shortest paths in a graph whose edges weigh 0 or 1 in O(n + m) with a deque, and Dial's algorithm for small integer weights."
 tags: [0-1 bfs, deque, shortest path, dial]
 prerequisites: [graphs/breadth-first-search, graphs/dijkstra]
 source:

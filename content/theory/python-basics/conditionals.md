@@ -1,9 +1,9 @@
 ---
-title: Conditional Statements
+title: "Conditional Statements"
 section: Control flow
 order: 1
 difficulty: beginner
-summary: if / elif / else, comparison and logical operators, truthiness, the conditional expression and match.
+summary: "if / elif / else, comparison and logical operators, truthiness, the conditional expression and match."
 tags: [if, boolean, branching, match]
 prerequisites: [python-basics/variables-and-types]
 problems: [par-sau-impar]

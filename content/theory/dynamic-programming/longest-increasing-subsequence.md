@@ -1,9 +1,9 @@
 ---
-title: Longest Increasing Subsequence
+title: "Longest Increasing Subsequence"
 section: Classic problems
 order: 2
 difficulty: intermediate
-summary: Find the longest strictly increasing subsequence in O(n²) with DP and in O(n log n) with binary search, and restore the subsequence itself.
+summary: "Find the longest strictly increasing subsequence in O(n²) with DP and in O(n log n) with binary search, and restore the subsequence itself."
 tags: [lis, dp, binary search, bisect]
 prerequisites: [dynamic-programming/introduction-to-dp, python-contests/heaps-deques-and-bisect]
 source:

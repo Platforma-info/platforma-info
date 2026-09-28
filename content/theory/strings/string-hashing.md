@@ -1,9 +1,9 @@
 ---
-title: String Hashing and Rabin-Karp
+title: "String Hashing and Rabin-Karp"
 section: Fundamentals
 order: 1
 difficulty: intermediate
-summary: Compare any two substrings in O(1) after O(n) preprocessing with polynomial hashes, and use rolling hashes to search for patterns.
+summary: "Compare any two substrings in O(1) after O(n) preprocessing with polynomial hashes, and use rolling hashes to search for patterns."
 tags: [hashing, rabin-karp, substrings, modular arithmetic]
 prerequisites: [math/modular-inverse]
 source:

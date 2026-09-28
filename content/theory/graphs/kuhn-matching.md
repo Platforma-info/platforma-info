@@ -3,7 +3,7 @@ title: "Kuhn's Algorithm: Maximum Bipartite Matching"
 section: Flows and matchings
 order: 2
 difficulty: advanced
-summary: Pair up as many left and right vertices as possible using augmenting paths, in O(V·E).
+summary: "Pair up as many left and right vertices as possible using augmenting paths, in O(V·E)."
 tags: [matching, bipartite, augmenting path, kuhn]
 prerequisites: [graphs/bipartite-check, graphs/breadth-first-search]
 source:

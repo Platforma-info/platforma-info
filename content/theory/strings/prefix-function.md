@@ -1,9 +1,9 @@
 ---
-title: Prefix Function and Knuth-Morris-Pratt
+title: "Prefix Function and Knuth-Morris-Pratt"
 section: Fundamentals
 order: 2
 difficulty: intermediate
-summary: Compute the longest proper border of every prefix in O(n), and use it for pattern matching, string periods and counting occurrences.
+summary: "Compute the longest proper border of every prefix in O(n), and use it for pattern matching, string periods and counting occurrences."
 tags: [prefix function, kmp, borders, pattern matching]
 prerequisites: [python-basics/strings]
 source:

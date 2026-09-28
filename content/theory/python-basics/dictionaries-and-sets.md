@@ -1,9 +1,9 @@
 ---
-title: Dictionaries and Sets
+title: "Dictionaries and Sets"
 section: Collections
 order: 2
 difficulty: beginner
-summary: Hash-based collections with O(1) lookups: counting, grouping, membership tests and set algebra.
+summary: "Hash-based collections with O(1) lookups: counting, grouping, membership tests and set algebra."
 tags: [dict, set, hashing, counting]
 prerequisites: [python-basics/lists-and-tuples]
 problems: [litera-frecventa]

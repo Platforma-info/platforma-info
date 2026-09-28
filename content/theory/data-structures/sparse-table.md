@@ -1,9 +1,9 @@
 ---
-title: Sparse Table
+title: "Sparse Table"
 section: Fundamentals
 order: 2
 difficulty: intermediate
-summary: Answer range-minimum (and other idempotent) queries in O(1) after O(n log n) preprocessing, for arrays that never change.
+summary: "Answer range-minimum (and other idempotent) queries in O(1) after O(n log n) preprocessing, for arrays that never change."
 tags: [sparse table, rmq, range queries, static array]
 prerequisites: [math/bit-manipulation]
 source:

@@ -1,9 +1,9 @@
 ---
-title: Finding a Cycle in a Graph
+title: "Finding a Cycle in a Graph"
 section: Ordering
 order: 2
 difficulty: intermediate
-summary: Detect a cycle and recover its vertices in O(n + m), in directed graphs with DFS colours and in undirected graphs by tracking the parent edge.
+summary: "Detect a cycle and recover its vertices in O(n + m), in directed graphs with DFS colours and in undirected graphs by tracking the parent edge."
 tags: [cycle detection, dfs, directed, undirected]
 prerequisites: [graphs/depth-first-search]
 source:

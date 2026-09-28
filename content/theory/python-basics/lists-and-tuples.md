@@ -1,9 +1,9 @@
 ---
-title: Lists and Tuples
+title: "Lists and Tuples"
 section: Collections
 order: 1
 difficulty: beginner
-summary: Python's workhorse sequences: creating, indexing, slicing, sorting and modifying lists, and when to use tuples.
+summary: "Python's workhorse sequences: creating, indexing, slicing, sorting and modifying lists, and when to use tuples."
 tags: [lists, tuples, sorting, sequences]
 prerequisites: [python-basics/strings]
 problems: [maxim-lista, inversare-lista, medie-aritmetica, suma-numere-impare]

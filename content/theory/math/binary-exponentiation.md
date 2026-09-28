@@ -1,9 +1,9 @@
 ---
-title: Binary Exponentiation
+title: "Binary Exponentiation"
 section: Fundamentals
 order: 1
 difficulty: beginner
-summary: Compute powers in O(log n) multiplications by squaring, and reuse the same trick for modular powers, matrices and more.
+summary: "Compute powers in O(log n) multiplications by squaring, and reuse the same trick for modular powers, matrices and more."
 tags: [math, modular arithmetic, matrices, divide and conquer]
 prerequisites: []
 source:

@@ -1,9 +1,9 @@
 ---
-title: Dijkstra's Algorithm
+title: "Dijkstra's Algorithm"
 section: Shortest paths
 order: 1
 difficulty: intermediate
-summary: Shortest paths from one source in a graph with non-negative weights, in O((n + m) log n) with a heap, plus path restoration.
+summary: "Shortest paths from one source in a graph with non-negative weights, in O((n + m) log n) with a heap, plus path restoration."
 tags: [dijkstra, shortest path, heap, weighted graphs]
 prerequisites: [graphs/breadth-first-search, python-contests/heaps-deques-and-bisect]
 source:

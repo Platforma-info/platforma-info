@@ -1,9 +1,9 @@
 ---
-title: Extended Euclidean Algorithm
+title: "Extended Euclidean Algorithm"
 section: Fundamentals
 order: 3
 difficulty: intermediate
-summary: Find integers x and y with ax + by = gcd(a, b), and use them to solve linear Diophantine equations.
+summary: "Find integers x and y with ax + by = gcd(a, b), and use them to solve linear Diophantine equations."
 tags: [gcd, bezout, diophantine, number theory]
 prerequisites: [math/euclidean-algorithm]
 source:

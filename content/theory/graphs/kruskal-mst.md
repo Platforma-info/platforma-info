@@ -1,9 +1,9 @@
 ---
-title: Minimum Spanning Tree: Kruskal's Algorithm
+title: "Minimum Spanning Tree: Kruskal's Algorithm"
 section: Spanning trees
 order: 1
 difficulty: intermediate
-summary: Connect all vertices at the smallest total cost by sorting edges and joining components with a disjoint set union, in O(m log m).
+summary: "Connect all vertices at the smallest total cost by sorting edges and joining components with a disjoint set union, in O(m log m)."
 tags: [mst, kruskal, dsu, greedy, spanning tree]
 prerequisites: [data-structures/disjoint-set-union]
 source:

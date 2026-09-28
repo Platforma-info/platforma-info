@@ -1,9 +1,9 @@
 ---
-title: Eulerian Path and Circuit
+title: "Eulerian Path and Circuit"
 section: Ordering
 order: 3
 difficulty: advanced
-summary: Walk every edge exactly once — when it is possible and how to construct the walk with Hierholzer's algorithm in O(m).
+summary: "Walk every edge exactly once — when it is possible and how to construct the walk with Hierholzer's algorithm in O(m)."
 tags: [euler path, euler circuit, hierholzer, degrees]
 prerequisites: [graphs/depth-first-search]
 source:

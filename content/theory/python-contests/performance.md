@@ -1,9 +1,9 @@
 ---
-title: Performance and Time Limits
+title: "Performance and Time Limits"
 section: Performance
 order: 1
 difficulty: intermediate
-summary: How to estimate whether a solution will pass, the complexity limits for Python, and the habits that make CPython code faster.
+summary: "How to estimate whether a solution will pass, the complexity limits for Python, and the habits that make CPython code faster."
 tags: [complexity, time limit, optimization, big-O]
 prerequisites: [python-contests/fast-io]
 ---

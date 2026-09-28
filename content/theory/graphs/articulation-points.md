@@ -1,9 +1,9 @@
 ---
-title: Finding Articulation Points
+title: "Finding Articulation Points"
 section: Connectivity
 order: 3
 difficulty: advanced
-summary: Find the vertices whose removal disconnects the graph, in O(n + m), using the same low-link values as for bridges.
+summary: "Find the vertices whose removal disconnects the graph, in O(n + m), using the same low-link values as for bridges."
 tags: [articulation points, cut vertices, dfs, low-link]
 prerequisites: [graphs/bridges]
 source:

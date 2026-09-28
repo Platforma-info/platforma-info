@@ -3,7 +3,7 @@ title: "Manacher's Algorithm: All Palindromic Substrings"
 section: Tasks
 order: 1
 difficulty: advanced
-summary: Find the longest palindrome centered at every position, and hence count all palindromic substrings, in O(n).
+summary: "Find the longest palindrome centered at every position, and hence count all palindromic substrings, in O(n)."
 tags: [palindromes, manacher, strings]
 prerequisites: [strings/z-function]
 source:

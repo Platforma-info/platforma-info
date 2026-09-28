@@ -1,9 +1,9 @@
 ---
-title: Euclidean Algorithm (GCD and LCM)
+title: "Euclidean Algorithm (GCD and LCM)"
 section: Fundamentals
 order: 2
 difficulty: beginner
-summary: Compute the greatest common divisor in O(log min(a, b)) steps, derive the LCM from it, and learn the modulo-free binary variant.
+summary: "Compute the greatest common divisor in O(log min(a, b)) steps, derive the LCM from it, and learn the modulo-free binary variant."
 tags: [gcd, lcm, number theory, euclid]
 prerequisites: [math/binary-exponentiation]
 source:

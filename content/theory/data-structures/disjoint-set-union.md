@@ -1,9 +1,9 @@
 ---
-title: Disjoint Set Union (Union-Find)
+title: "Disjoint Set Union (Union-Find)"
 section: Trees
 order: 1
 difficulty: intermediate
-summary: Maintain a partition of elements into sets with near-constant-time merge and find, using path compression and union by size.
+summary: "Maintain a partition of elements into sets with near-constant-time merge and find, using path compression and union by size."
 tags: [dsu, union-find, connectivity, graphs]
 prerequisites: [python-basics/classes-and-objects]
 source:

@@ -1,9 +1,9 @@
 ---
-title: Chinese Remainder Theorem
+title: "Chinese Remainder Theorem"
 section: Modular arithmetic
 order: 2
 difficulty: advanced
-summary: Combine congruences x ≡ a_i (mod m_i) into a single one, first for coprime moduli, then for arbitrary moduli.
+summary: "Combine congruences x ≡ a_i (mod m_i) into a single one, first for coprime moduli, then for arbitrary moduli."
 tags: [crt, congruences, modular arithmetic]
 prerequisites: [math/modular-inverse]
 source:

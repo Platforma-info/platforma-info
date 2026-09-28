@@ -1,9 +1,9 @@
 ---
-title: Finding Bridges
+title: "Finding Bridges"
 section: Connectivity
 order: 2
 difficulty: advanced
-summary: Find the edges whose removal disconnects the graph in O(n + m) using DFS entry times and low-link values.
+summary: "Find the edges whose removal disconnects the graph in O(n + m) using DFS entry times and low-link values."
 tags: [bridges, dfs, low-link, tarjan]
 prerequisites: [graphs/depth-first-search]
 source:

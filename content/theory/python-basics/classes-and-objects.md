@@ -1,9 +1,9 @@
 ---
-title: Classes and Objects
+title: "Classes and Objects"
 section: Objects
 order: 1
 difficulty: intermediate
-summary: Model data and behaviour together with classes: attributes, methods, __init__, __str__ and class attributes.
+summary: "Model data and behaviour together with classes: attributes, methods, __init__, __str__ and class attributes."
 tags: [oop, classes, methods]
 prerequisites: [python-basics/functions]
 ---

@@ -1,9 +1,9 @@
 ---
-title: Modular Multiplicative Inverse
+title: "Modular Multiplicative Inverse"
 section: Modular arithmetic
 order: 1
 difficulty: intermediate
-summary: Divide under a modulus. Find a^-1 mod m with extended Euclid, with Fermat/Euler, with Python's pow, and for a whole array at once.
+summary: "Divide under a modulus. Find a^-1 mod m with extended Euclid, with Fermat/Euler, with Python's pow, and for a whole array at once."
 tags: [modular arithmetic, inverse, fermat, division]
 prerequisites: [math/extended-euclidean-algorithm, math/euler-totient-function]
 source:

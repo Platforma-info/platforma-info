@@ -3,7 +3,7 @@ title: "Maximum Flow: Edmonds-Karp and Dinic"
 section: Flows and matchings
 order: 3
 difficulty: advanced
-summary: Push as much "stuff" as possible through a capacitated network with augmenting paths, and see why max flow equals min cut.
+summary: "Push as much \"stuff\" as possible through a capacitated network with augmenting paths, and see why max flow equals min cut."
 tags: [max flow, min cut, edmonds-karp, dinic, network]
 prerequisites: [graphs/breadth-first-search]
 source:

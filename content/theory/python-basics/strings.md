@@ -1,9 +1,9 @@
 ---
-title: Strings
+title: "Strings"
 section: Data and text
 order: 2
 difficulty: beginner
-summary: Indexing, slicing, the most useful string methods, escape sequences and f-strings.
+summary: "Indexing, slicing, the most useful string methods, escape sequences and f-strings."
 tags: [strings, slicing, methods]
 prerequisites: [python-basics/variables-and-types]
 problems: [nume-inversat, palindrom, numarare-vocale]

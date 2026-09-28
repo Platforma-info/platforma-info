@@ -66,7 +66,13 @@ function parseArticle(track: Track, fileName: string): Article {
   const slug = fileName.replace(/\.md$/, "");
   const rel = `${track.slug}/${fileName}`;
   const raw = fs.readFileSync(path.join(CONTENT_DIR, track.slug, fileName), "utf8");
-  const { data, content } = matter(raw);
+  let parsed: matter.GrayMatterFile<string>;
+  try {
+    parsed = matter(raw);
+  } catch (err) {
+    fail(rel, `invalid front-matter: ${err instanceof Error ? err.message.split("\n")[0] : err}`);
+  }
+  const { data, content } = parsed;
 
   const section = str(rel, data, "section");
   if (!track.sections.includes(section)) {

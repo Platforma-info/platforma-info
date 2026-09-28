@@ -1,9 +1,9 @@
 ---
-title: Files and Standard Input
+title: "Files and Standard Input"
 section: Files and errors
 order: 1
 difficulty: beginner
-summary: Read and write files with the with statement, and the standard-input techniques you use in every judged problem.
+summary: "Read and write files with the with statement, and the standard-input techniques you use in every judged problem."
 tags: [files, io, stdin, with]
 prerequisites: [python-basics/strings]
 ---

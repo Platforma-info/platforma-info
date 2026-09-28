@@ -1,9 +1,9 @@
 ---
-title: Minimum Stack and Minimum Queue
+title: "Minimum Stack and Minimum Queue"
 section: Fundamentals
 order: 1
 difficulty: intermediate
-summary: Keep the minimum of a stack or a queue available in O(1), and find the minimum of every window of fixed length in O(n).
+summary: "Keep the minimum of a stack or a queue available in O(1), and find the minimum of every window of fixed length in O(n)."
 tags: [stack, queue, deque, sliding window, monotonic]
 prerequisites: [python-contests/heaps-deques-and-bisect]
 source:

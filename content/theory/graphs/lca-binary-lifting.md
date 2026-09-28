@@ -1,9 +1,9 @@
 ---
-title: Lowest Common Ancestor: Binary Lifting
+title: "Lowest Common Ancestor: Binary Lifting"
 section: Trees and LCA
 order: 1
 difficulty: advanced
-summary: Answer "lowest common ancestor of u and v" and k-th-ancestor queries on a rooted tree in O(log n) after O(n log n) preprocessing.
+summary: "Answer \"lowest common ancestor of u and v\" and k-th-ancestor queries on a rooted tree in O(log n) after O(n log n) preprocessing."
 tags: [lca, binary lifting, trees, ancestors]
 prerequisites: [graphs/depth-first-search, math/binary-exponentiation]
 source:

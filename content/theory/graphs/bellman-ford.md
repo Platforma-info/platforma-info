@@ -1,9 +1,9 @@
 ---
-title: Bellman-Ford Algorithm
+title: "Bellman-Ford Algorithm"
 section: Shortest paths
 order: 2
 difficulty: intermediate
-summary: Shortest paths with negative edge weights, detecting and extracting negative cycles, and the queue-based SPFA optimization.
+summary: "Shortest paths with negative edge weights, detecting and extracting negative cycles, and the queue-based SPFA optimization."
 tags: [bellman-ford, negative cycle, shortest path, spfa]
 prerequisites: [graphs/dijkstra]
 source:

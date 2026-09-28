@@ -1,9 +1,9 @@
 ---
-title: Checking Whether a Graph Is Bipartite
+title: "Checking Whether a Graph Is Bipartite"
 section: Flows and matchings
 order: 1
 difficulty: beginner
-summary: Two-colour a graph with BFS so that every edge joins different colours, or find an odd cycle that proves it impossible.
+summary: "Two-colour a graph with BFS so that every edge joins different colours, or find an odd cycle that proves it impossible."
 tags: [bipartite, coloring, bfs, odd cycle]
 prerequisites: [graphs/breadth-first-search]
 source:

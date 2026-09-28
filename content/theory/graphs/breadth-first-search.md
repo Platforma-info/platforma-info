@@ -1,9 +1,9 @@
 ---
-title: Breadth-First Search
+title: "Breadth-First Search"
 section: Graph traversal
 order: 2
 difficulty: beginner
-summary: Visit vertices in order of distance from a source with a queue: shortest paths in unweighted graphs, grids and more.
+summary: "Visit vertices in order of distance from a source with a queue: shortest paths in unweighted graphs, grids and more."
 tags: [bfs, shortest path, queue, traversal]
 prerequisites: [graphs/graph-basics, python-contests/heaps-deques-and-bisect]
 source:

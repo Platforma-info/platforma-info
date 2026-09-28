@@ -1,9 +1,9 @@
 ---
-title: Graphs: Terminology and Representation
+title: "Graphs: Terminology and Representation"
 section: Graph traversal
 order: 1
 difficulty: beginner
-summary: Vertices, edges and the vocabulary of graph problems, and the three ways to store a graph in Python (adjacency list, matrix, edge list).
+summary: "Vertices, edges and the vocabulary of graph problems, and the three ways to store a graph in Python (adjacency list, matrix, edge list)."
 tags: [graphs, adjacency list, representation, input]
 prerequisites: [python-basics/dictionaries-and-sets]
 ---

@@ -1,9 +1,9 @@
 ---
-title: Number and Sum of Divisors
+title: "Number and Sum of Divisors"
 section: Number-theoretic functions
 order: 2
 difficulty: intermediate
-summary: Compute d(n) and σ(n) from the prime factorization, list all divisors in O(√n), and get them for every n up to N with a sieve.
+summary: "Compute d(n) and σ(n) from the prime factorization, list all divisors in O(√n), and get them for every n up to N with a sieve."
 tags: [divisors, multiplicative functions, number theory]
 prerequisites: [math/integer-factorization]
 source:

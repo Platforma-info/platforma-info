@@ -1,9 +1,9 @@
 ---
-title: Comprehensions and Functional Tools
+title: "Comprehensions and Functional Tools"
 section: Idiomatic Python
 order: 1
 difficulty: intermediate
-summary: List/dict/set comprehensions, generator expressions, map, filter, reduce, any/all, and the itertools basics.
+summary: "List/dict/set comprehensions, generator expressions, map, filter, reduce, any/all, and the itertools basics."
 tags: [comprehension, generator, map, filter, reduce]
 prerequisites: [python-basics/loops, python-basics/functions]
 ---

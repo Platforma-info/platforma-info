@@ -1,9 +1,9 @@
 ---
-title: Modern Python Features
+title: "Modern Python Features"
 section: Idiomatic Python
 order: 2
 difficulty: intermediate
-summary: Type hints, the walrus operator, structural pattern matching, the __main__ guard and virtual environments.
+summary: "Type hints, the walrus operator, structural pattern matching, the __main__ guard and virtual environments."
 tags: [typing, walrus, match, venv, main]
 prerequisites: [python-basics/functions]
 ---

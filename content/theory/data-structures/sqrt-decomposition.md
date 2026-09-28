@@ -1,9 +1,9 @@
 ---
-title: Sqrt Decomposition and Mo's Algorithm
+title: "Sqrt Decomposition and Mo's Algorithm"
 section: Trees
 order: 4
 difficulty: advanced
-summary: Split an array into blocks of size about √n to balance updates and queries, and answer offline range queries by ordering them cleverly (Mo's algorithm).
+summary: "Split an array into blocks of size about √n to balance updates and queries, and answer offline range queries by ordering them cleverly (Mo's algorithm)."
 tags: [sqrt decomposition, mo's algorithm, blocks, offline queries]
 prerequisites: [data-structures/fenwick-tree]
 source:

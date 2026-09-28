@@ -1,9 +1,9 @@
 ---
-title: Fibonacci Numbers
+title: "Fibonacci Numbers"
 section: Fundamentals
 order: 4
 difficulty: intermediate
-summary: Properties of Fibonacci numbers and four ways to compute F(n): linear, matrix power, fast doubling and modulo-p with the Pisano period.
+summary: "Properties of Fibonacci numbers and four ways to compute F(n): linear, matrix power, fast doubling and modulo-p with the Pisano period."
 tags: [fibonacci, matrices, fast doubling, pisano]
 prerequisites: [math/binary-exponentiation]
 source:
