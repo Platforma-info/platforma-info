@@ -71,7 +71,10 @@ export const TRACKS: Track[] = [
       "Prime numbers",
       "Number-theoretic functions",
       "Modular arithmetic",
+      "Number systems",
       "Bits",
+      "Big numbers and polynomials",
+      "Advanced topics",
     ],
   },
   {
@@ -81,7 +84,7 @@ export const TRACKS: Track[] = [
       "Structures that answer range queries and maintain sets under updates in logarithmic time.",
     group: "algorithms",
     icon: "boxes",
-    sections: ["Fundamentals", "Trees"],
+    sections: ["Fundamentals", "Trees", "Advanced"],
   },
   {
     slug: "dynamic-programming",
@@ -89,15 +92,16 @@ export const TRACKS: Track[] = [
     description: "Turn exponential recursions into polynomial algorithms by remembering subproblems.",
     group: "algorithms",
     icon: "layers",
-    sections: ["Introduction", "Classic problems"],
+    sections: ["Introduction", "Classic problems", "Optimizations", "Tasks"],
   },
   {
     slug: "strings",
     title: "String Algorithms",
-    description: "Hashing, pattern matching and palindromes in linear time.",
+    description:
+      "Hashing, pattern matching, suffix structures and palindromes: the toolbox for text problems.",
     group: "algorithms",
     icon: "text",
-    sections: ["Fundamentals", "Tasks"],
+    sections: ["Fundamentals", "Advanced", "Tasks"],
   },
   {
     slug: "graphs",
@@ -114,6 +118,31 @@ export const TRACKS: Track[] = [
       "Trees and LCA",
       "Flows and matchings",
       "Ordering",
+      "Advanced topics",
+    ],
+  },
+  {
+    slug: "linear-algebra",
+    title: "Linear Algebra",
+    description: "Solve linear systems and compute determinants and ranks with Gaussian elimination.",
+    group: "algorithms",
+    icon: "grid",
+    sections: ["Matrices"],
+  },
+  {
+    slug: "geometry",
+    title: "Computational Geometry",
+    description:
+      "Points, lines, polygons and circles: the basic operations and the classic algorithms built on them.",
+    group: "algorithms",
+    icon: "shapes",
+    sections: [
+      "Elementary operations",
+      "Polygons",
+      "Convex hull",
+      "Sweep line",
+      "Planar graphs",
+      "Advanced topics",
     ],
   },
   {
@@ -122,7 +151,7 @@ export const TRACKS: Track[] = [
     description: "Counting objects without listing them: binomials, Catalan numbers and inclusion-exclusion.",
     group: "algorithms",
     icon: "dices",
-    sections: ["Fundamentals", "Techniques"],
+    sections: ["Fundamentals", "Techniques", "Tasks"],
   },
   {
     slug: "searching",
@@ -130,7 +159,7 @@ export const TRACKS: Track[] = [
     description: "Binary search on arrays and on answers, ternary search and iterative root finding.",
     group: "algorithms",
     icon: "search",
-    sections: ["Search"],
+    sections: ["Search", "Integration"],
   },
   {
     slug: "miscellaneous",
@@ -138,7 +167,7 @@ export const TRACKS: Track[] = [
     description: "Game theory, cycle detection and other classic tricks that do not fit elsewhere.",
     group: "algorithms",
     icon: "puzzle",
-    sections: ["Game theory", "Classic problems"],
+    sections: ["Sequences", "Game theory", "Scheduling", "Classic problems"],
   },
 ];
 

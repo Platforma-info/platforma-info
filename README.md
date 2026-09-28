@@ -35,13 +35,15 @@ npm run dev
 
 ## Teorie (`/theory`)
 
-Secțiune publică cu articole de teorie: Python de la zero, Python pentru concursuri și algoritmi
-(teoria numerelor, structuri de date, DP, stringuri, grafuri, combinatorică), fiecare cu cod Python testat.
+Secțiune publică cu peste 180 de articole de teorie: Python de la zero, Python pentru concursuri și tot
+conținutul [cp-algorithms.com](https://cp-algorithms.com) tradus în Python (matematică, structuri de date, DP,
+stringuri, grafuri și fluxuri, geometrie computațională, algebră liniară, combinatorică, metode numerice,
+teoria jocurilor, planificare), fiecare cu cod Python testat.
 
 - Conținutul este în `content/theory/<track>/<articol>.md` (Markdown + front-matter, matematică KaTeX, cod Shiki).
 - Track-urile și secțiunile lor sunt declarate în `src/lib/theory/tracks.ts`; loader-ul (`src/lib/theory/content.ts`)
   validează front-matter-ul, secțiunile și trimiterile între articole.
-- `npm run theory:check` validează front-matter-ul și **rulează tot codul Python** din articole, verificând și link-urile interne.
+- `npm run theory:check` validează front-matter-ul, verifică că toate formulele KaTeX se randează și **rulează tot codul Python** din articole (împreună cu testele din ele), verificând și link-urile interne.
 - Articolele cu `source:` în front-matter sunt adaptări după [cp-algorithms.com](https://cp-algorithms.com)
   (CC BY-SA 4.0); vezi `content/theory/NOTICE.md`.
 - Progresul de citire se păstrează în `localStorage` (fără modificări în baza de date).
