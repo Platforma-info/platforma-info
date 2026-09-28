@@ -228,12 +228,17 @@ assert mul_mod(123456789012345678, 987654321098765432, m) == 123456789012345678 
 
 ## Practice problems
 
-From the original article:
-
 - [UVa 1230 - MODEX](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3671)
 - [UVa 374 - Big Mod](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=310)
 - [UVa 11029 - Leading and Trailing](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1970)
 - [Codeforces - Parking Lot](http://codeforces.com/problemset/problem/630/I)
-- [LeetCode - Count Good Numbers](https://leetcode.com/problems/count-good-numbers/)
+- [leetcode - Count good numbers](https://leetcode.com/problems/count-good-numbers/)
+- [Codechef - Chef and Riffles](https://www.codechef.com/JAN221B/problems/RIFFLES)
+- [Codeforces - Decoding Genome](https://codeforces.com/contest/222/problem/E)
+- [Codeforces - Neural Network Country](https://codeforces.com/contest/852/problem/B)
 - [Codeforces - Magic Gems](https://codeforces.com/problemset/problem/1117/D)
 - [SPOJ - The last digit](http://www.spoj.com/problems/LASTDIG/)
+- [SPOJ - Locker](http://www.spoj.com/problems/LOCKER/)
+- [LA - 3722 Jewel-eating Monsters](https://vjudge.net/problem/UVALive-3722)
+- [SPOJ - Just add it](http://www.spoj.com/problems/ZSUM/)
+- [Codeforces - Stairs and Lines](https://codeforces.com/contest/498/problem/E)

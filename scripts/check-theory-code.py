@@ -62,6 +62,14 @@ def lint(path: Path, text: str) -> list[str]:
             problems.append(f"single-line $$ (renders inline; use a multi-line block): {s[:50]}")
         if "\t" in line:
             problems.append("tab character in prose")
+    headings = [l.strip() for l in body.splitlines() if l.startswith("## ")]
+    for h in set(headings):
+        if headings.count(h) > 1:
+            problems.append(f"duplicate heading: {h}")
+    if re.search(r"^# ", body, re.M):
+        problems.append("H1 in body (the page title is rendered from front-matter)")
+    if "%%PRACTICE" in text:
+        problems.append("unexpanded %%PRACTICE placeholder")
     if body.count("$$") % 2:
         problems.append("unbalanced $$ delimiters")
     if not text.startswith("---\n"):
