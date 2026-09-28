@@ -5,7 +5,7 @@ order: 6
 difficulty: advanced
 summary: "Encode a labeled tree as a sequence of n−2 numbers, decode it back in linear time, and derive Cayley's formula and the number of ways to connect a graph."
 tags: [prüfer code, cayley formula, labeled trees, bijection, counting]
-prerequisites: [graphs/graph-basics, math/binomial-coefficients]
+prerequisites: [graphs/graph-basics, combinatorics/binomial-coefficients]
 source:
   title: "Prüfer code"
   url: https://cp-algorithms.com/graph/pruefer_code.html
