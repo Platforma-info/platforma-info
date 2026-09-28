@@ -62,6 +62,12 @@ def lint(path: Path, text: str) -> list[str]:
             problems.append(f"single-line $$ (renders inline; use a multi-line block): {s[:50]}")
         if "\t" in line:
             problems.append("tab character in prose")
+    for pattern, label in (
+        (r"\bor True\b|if False\b|== 0 \+ ", "tautological or dead code in an example"),
+        (r"\b[Ll]et me\b|on purpose\?|instead of guessing", "drafting note left in the text"),
+    ):
+        if re.search(pattern, text):
+            problems.append(label)
     headings = [l.strip() for l in body.splitlines() if l.startswith("## ")]
     for h in set(headings):
         if headings.count(h) > 1:
